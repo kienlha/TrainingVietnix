@@ -69,4 +69,5 @@ Tạo file backup trang web wordpress:
 ![image](https://github.com/user-attachments/assets/9148d425-0dbe-464f-8125-e63127b19764)
 
 - Vào trang quản lý tên miền trỏ vào IP của Cyberpanel, sau đó truy cập tên miền kienlha.xyz sẽ vào được trang web chuyển từ Cpanel:
-![image](https://github.com/user-attachments/assets/e0f424da-8849-4f09-9fdc-55faa154cc09)
+![image](https://github.com/user-attachments/assets/549af295-96cd-49e2-ad98-79401eaaab4d)
+
