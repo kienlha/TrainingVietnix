@@ -47,3 +47,26 @@ Nhập các thông tin cần thiết và nhấn Install Now:
 
 Sau khi cài xong, khi truy cập vào tên miền kienlha.xyz ta sẽ vào được website đã tạo:
 ![image](https://github.com/user-attachments/assets/3b091c99-51b4-45e0-8baa-b3adfb94239e)
+
+# 4. Chuyển dữ liệu website từ Cpanel qua Cyberpanel:
+Tạo file backup trang web wordpress:
+- Vào File Manager, nén tất cả các file trong thư mục lưu web (public_html), sau đó tải về máy
+![image](https://github.com/user-attachments/assets/036bff02-c87e-409e-b527-6b90412ebd09)
+
+- Vào Databases, chọn phpMyAdmin, chọn CSDL của trang web cần chuyển, chọn mục Export, sau đó nhấn nút Export ở dưới để tải CSDL về máy:
+![image](https://github.com/user-attachments/assets/5a88c95c-5ba1-4d1a-949c-6f453e61db0a)
+
+- Upload và giải nén dữ liệu trang web vào trong thư mục public_html của Cyberpanel:
+![image](https://github.com/user-attachments/assets/e75d6580-56a3-4e9a-a135-388e59dd1b0b)
+
+- Vào phpMyAdmin của Cyberpanel và import CSDL của trang web cũ vào CSDL của trang mới:
+![image](https://github.com/user-attachments/assets/501b05bb-8629-4bba-953d-9dae89c33260)
+
+- Trong File Manager, chọn file wp-config.php và chọn Edit:
+![image](https://github.com/user-attachments/assets/5aad3327-f791-4a3c-9297-54e7203d7565)
+
+- Sửa lại các thông tin cho đúng với CSDL bên Cyberpanel và lưu lại:
+![image](https://github.com/user-attachments/assets/9148d425-0dbe-464f-8125-e63127b19764)
+
+- Vào trang quản lý tên miền trỏ vào IP của Cyberpanel, sau đó truy cập tên miền kienlha.xyz sẽ vào được trang web chuyển từ Cpanel:
+![image](https://github.com/user-attachments/assets/e0f424da-8849-4f09-9fdc-55faa154cc09)
