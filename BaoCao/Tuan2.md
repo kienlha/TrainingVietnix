@@ -6,12 +6,13 @@ Trang quản trị Domain của Hostinger:
 - Để trỏ domain vào hosting ta chỉnh sửa địa chỉ IP trong A record:
 ![image](https://github.com/user-attachments/assets/3c53b49f-fac5-4b24-92d3-6100481ec8a6)
 
-Xem thông tin Domain:
-![image](https://github.com/user-attachments/assets/d8f6addb-56a5-4f7e-a9e8-ed86a151acd4)
+Xem thông tin Domain bằng cách sử dụng công cụ LOOKUP của ICANN:
+![image](https://github.com/user-attachments/assets/a5238446-930f-4678-837b-6e5f065c1c28)
 
 Các trạng thái cần có của Domain: 
 - Server Status Code: addPeriod, autoRenewPeriod, inactive, ok, pendingCreate, pendingDelete, pendingRenew, pendingRestore, pendingTransfer, pendingUpdate, redemptionPeriod, renewPeriod, serverDeleteProhibited, serverHold, serverRenewProhibited, serverTransferProhibited, serverUpdateProhibited,  transferPeriod.
 - Client Status Code: clientDeleteProhibited, clientHold, clientRenewProhibited, clientTransferProhibited, clientUpdateProhibited.
+  
 Các trạng thái gây ảnh hưởng tới việc truy cập website: inactive, pendingDelete, redemptionPeriod, serverHold, clientHold.
 # 2. Đăng ký, cài đặt cấu hình hosting/vps
 Hosting:
