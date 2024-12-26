@@ -33,3 +33,17 @@ Truy cập vào Cyberpanel bằng cách nhập kienlha.xyz:8090 vào thanh đị
 Sau khi đăng nhập thành công sẽ vào giao diện chính của Cyberpanel:
 ![image](https://github.com/user-attachments/assets/300aa4ac-e886-4a80-9994-c3c893255542)
 
+Để tạo website, trong MAIN, chọn Website->Create Website và điền vào các thông tin cần thiết:
+![image](https://github.com/user-attachments/assets/916c0459-ae24-4d51-a8b2-ee4bb01aeaea)
+
+Để cài wordpress và tạo nội dung cho website, vào List Websites, chọn Manage:
+![image](https://github.com/user-attachments/assets/098b8748-e931-42a3-9454-67c41471c25c)
+
+Trong APPlICATION INSTALLER, chọn WP+LS CACHE:
+![image](https://github.com/user-attachments/assets/05c491b0-d805-4384-873d-6c0d2d765fe1)
+
+Nhập các thông tin cần thiết và nhấn Install Now:
+![image](https://github.com/user-attachments/assets/8b8dc1c2-2b3a-40f6-88df-3cb52590cdd2)
+
+Sau khi cài xong, khi truy cập vào tên miền kienlha.xyz ta sẽ vào được website đã tạo:
+![image](https://github.com/user-attachments/assets/3b091c99-51b4-45e0-8baa-b3adfb94239e)
