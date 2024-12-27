@@ -103,7 +103,7 @@ Mở file cấu hình với lệnh: `sudo -u www-data nano /srv/www/wordpress/wp
 Xóa các dòng sau:
 ![image](https://github.com/user-attachments/assets/0cdfea8e-2c80-4975-838b-0990e114bd01)
 
-Thay thế bằng:
+Thay thế bằng:\
 ![image](https://github.com/user-attachments/assets/0ff32e43-9282-47cc-941d-4980b93fc6b5)
 
 ## Vào trang WordPress:
@@ -196,6 +196,12 @@ Một số lợi ích của Reverse Proxy:
 - Giảm áp lực xử lý SSL trên máy chủ backend và cung cấp một lớp bảo mật tốt hơn
 - Chuyển hướng linh hoạt
 ## Cài đặt Reverse Proxy
+Cài đặt NGINX với lệnh `apt install --purge ea-nginx`
+![image](https://github.com/user-attachments/assets/38242ee5-8244-4047-b7eb-cb8b7271cbaa)
+
+Như vậy ta đã cài reverse proxy NGINX thành công, để kiểm tra, khi vào Cpanel ta thấy trong cột General Information có thêm mục NGINX caching:\
+![image](https://github.com/user-attachments/assets/90e17cae-960a-446f-8231-db6b1ea928d1)
+
 
 
 
