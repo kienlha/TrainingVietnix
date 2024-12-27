@@ -129,5 +129,61 @@ Nhấn Install Now trên plugin cấn cài đặt:
 Sau khi cài xong nhấn Activate để kích hoạt Plugin:\
 ![image](https://github.com/user-attachments/assets/b535dddc-8abb-43d8-9fa5-5a1c2416117f)
 
+# 6. Setup Mail Account, FTP Account trên Cpanel
+## Mail Account:
+Các công cụ về Email trên Cpanel:
+![image](https://github.com/user-attachments/assets/52ac6ccc-785c-4cc8-97e4-017aa9dc3948)
+
+Giao diện quản lý Email Accounts:
+![image](https://github.com/user-attachments/assets/3538749d-54fe-4e06-ab34-ae70a92cd572)
+
+Để tạo 1 Email mới ta nhấn nút Create trên giao diện Email Accounts, sau đó điền các thông tin cần thiết, cuối cùng nhấn Create để tạo:
+![image](https://github.com/user-attachments/assets/a2e2d4d0-9289-4cd5-85b0-08c124a7243d)
+
+Truy cập vào web mail bằng đường dẫn http://url:2096:
+![image](https://github.com/user-attachments/assets/88ca7987-26ef-42eb-96b5-f9160e6f4d19)
+
+Đăng nhập bằng tài khoản vừa tạo ta sẽ vào được giao diện webmail:
+![image](https://github.com/user-attachments/assets/d070744b-1d9c-4287-965c-0adca154e53d)
+
+Nhấn Open để vào Inbox của mail:
+![image](https://github.com/user-attachments/assets/ebdeb826-68be-4e80-8c49-3c275239060f)
+
+Tại đây ta có thể sử dụng các chức năng của Web Mail như gửi/nhận Email,...
+![image](https://github.com/user-attachments/assets/a6e8aa22-206b-4ad3-aee4-4fa555df316b)
+
+Quay về giao diện Email Accounts, nhấn nút Manage để thực hiện các tùy chỉnh đối với tài khoản Mail được chọn:
+![image](https://github.com/user-attachments/assets/49b138de-9311-4dbe-8769-2d0737fa5c02)
+
+Tại đây ta có thể đổi mật khẩu, cấp phát dung lượng lưu trữ, chọn các restriction, hoặc xóa tài khoản email:
+![image](https://github.com/user-attachments/assets/c1efe3d6-3f8b-4eed-b8df-98b91115286e)
+
+## FTP Account:
+Trong Files, chọn FTP Accounts:
+![image](https://github.com/user-attachments/assets/0238412a-5912-4304-89c6-dbc0abd542a0)
+
+Nhập các thông tin cần thiết rồi nhấn Create FTP Account để tạo 1 tài khoản FTP:
+![image](https://github.com/user-attachments/assets/fd7c9a10-637c-43ea-8962-b2b5a4e427e7)
+
+Danh sách tài khoản FTP được tạo, tại đây ta có thể đổi password tài khoản, đặt giới hạn lưu trữ cũng như xóa tài khoản:
+![image](https://github.com/user-attachments/assets/7572edb1-91ac-4dd2-a0cc-c2f59b54425f)
+
+Danh sách tài khoản FTP đặc biệt được tạo mặc định:
+![image](https://github.com/user-attachments/assets/dee02b46-541d-4765-88fd-dae1254ad5c4)
+
+Sử dụng Filezilla để kiểm tra:
+Nhập vào thông tin tài khoản FTP đã tạo:
+![image](https://github.com/user-attachments/assets/1f25fa04-8b5d-4abf-826a-68c4eb99984a)
+
+Nhấn Quickconnect ta thấy đăng nhập thành công:
+![image](https://github.com/user-attachments/assets/5702d5de-e195-4519-9543-1e70254e1534)
+
+Nhấn chuột phải vào 1 file và nhấn Upload:
+![image](https://github.com/user-attachments/assets/46856b11-aa53-4489-8b6d-a32083e028e8)
+
+Upload file thành công:
+![image](https://github.com/user-attachments/assets/b5ab3669-01c8-4c4c-91c9-b9da118fa333)
+
+
 
 
