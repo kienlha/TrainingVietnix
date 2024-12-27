@@ -184,6 +184,20 @@ Nhấn chuột phải vào 1 file và nhấn Upload:
 Upload file thành công:
 ![image](https://github.com/user-attachments/assets/b5ab3669-01c8-4c4c-91c9-b9da118fa333)
 
+# 7.Reverse Proxy
+## Giới thiệu
+Reverse Proxy là một loại máy chủ (Server) hoạt động như một trung gian giữa người dùng và các máy chủ Back-end (Backend Servers). Trong kiến trúc mạng, Reverse Proxy (hoặc còn gọi là Server đảo ngược) thường được đặt giữa người dùng và các máy chủ backend để thực hiện một số chức năng quan trọng.
+![image](https://github.com/user-attachments/assets/6c21d1b5-7786-4246-bff1-bb154c68d9c2)
+
+Một số lợi ích của Reverse Proxy: 
+- Phân phối tải hiệu quả
+- Tăng tốc độ tải trang
+- Bảo mật tốt
+- Giảm áp lực xử lý SSL trên máy chủ backend và cung cấp một lớp bảo mật tốt hơn
+- Chuyển hướng linh hoạt
+## Cài đặt Reverse Proxy
+
+
 
 
 
