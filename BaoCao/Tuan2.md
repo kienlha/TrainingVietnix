@@ -106,7 +106,7 @@ Xóa các dòng sau:
 Thay thế bằng:
 ![image](https://github.com/user-attachments/assets/0ff32e43-9282-47cc-941d-4980b93fc6b5)
 
-## Cấu hình WordPress:
+## Vào trang WordPress:
 Truy cập vào IP của VPS:
 ![image](https://github.com/user-attachments/assets/433f289d-66eb-4de3-b115-eab342f9de16)
 
@@ -119,6 +119,15 @@ Nhập các thông tin cần thiết:
 Kết quả vào được Dashboard WordPress:
 ![image](https://github.com/user-attachments/assets/5708e561-bb77-4cb3-8346-21c54169bc8e)
 
+## Cài đặt plugin cho WordPress:
+Tại dashboard chọn Plugins ở thanh bên trái và nhấn Add New Plugin:
+![image](https://github.com/user-attachments/assets/a571c7c7-c705-4dcb-b802-d89d92659d96)
+
+Nhấn Install Now trên plugin cấn cài đặt:
+![image](https://github.com/user-attachments/assets/5e19590e-df33-41b5-a712-8432c7fd91c5)
+
+Sau khi cài xong nhấn Activate để kích hoạt Plugin:\
+![image](https://github.com/user-attachments/assets/b535dddc-8abb-43d8-9fa5-5a1c2416117f)
 
 
 
