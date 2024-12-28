@@ -197,15 +197,74 @@ Một số lợi ích của Reverse Proxy:
 - Bảo mật tốt
 - Giảm áp lực xử lý SSL trên máy chủ backend và cung cấp một lớp bảo mật tốt hơn
 - Chuyển hướng linh hoạt
-## Cài đặt Reverse Proxy
+## Cài đặt Reverse Proxy cho Cpanel
+Trang web hiện tại của Cpanel đang sử dụng web server là Apache:\
+![image](https://github.com/user-attachments/assets/7f82891b-9f80-4c04-83b9-83cad3d2073a)
+
 Cài đặt NGINX với lệnh `apt install --purge ea-nginx`
 ![image](https://github.com/user-attachments/assets/38242ee5-8244-4047-b7eb-cb8b7271cbaa)
 
 Như vậy ta đã cài reverse proxy NGINX thành công, để kiểm tra, khi vào Cpanel ta thấy trong cột General Information có thêm mục NGINX caching:\
 ![image](https://github.com/user-attachments/assets/90e17cae-960a-446f-8231-db6b1ea928d1)
 
+Trên WHM, ta thấy xuất hiện các tùy chọn của NGINX Manager:
+![image](https://github.com/user-attachments/assets/b4db4834-24e5-4f49-b456-9dcf6e7b5ca9)
 
+Ta thấy web server lúc này đã chuyển sang nginx:
+![image](https://github.com/user-attachments/assets/60cfc35d-e687-417b-a243-2b2ba17a3345)
 
+## Cài đặt Reverse Proxy NGINX cho Webserver Apache
+Cài đặt Apache và kiểm tra trạng thái của nó:\
+![image](https://github.com/user-attachments/assets/d9280c84-9002-4db5-b75f-b85e62e8bb73)
+![image](https://github.com/user-attachments/assets/4cec557d-4ee7-4a09-9d5f-a6c8f3d3b701)
+
+Truy cập vào IP của VPS ta thấy đã cái Apache thành công:
+![image](https://github.com/user-attachments/assets/3d1428c8-9d20-44ad-b1a3-35e130e068e9)
+
+Để cấu hình NGINX làm reverse proxy, đâù tiên cần cài NGINX:\
+![image](https://github.com/user-attachments/assets/2e39bf27-e153-4b8e-a39f-ce6f00eea563)
+
+Sửa cấu hình của máy chủ Apache đang listen trên cổng 80 sang một cổng khác (ở đây là 8080):\
+![image](https://github.com/user-attachments/assets/fb4d3065-bd02-410f-8a90-03cf7b74a6a6)
+![image](https://github.com/user-attachments/assets/8aae5a82-2ffb-48f9-9404-d5a6040b9826)
+
+Vì đã chuyển port của Apache sang cống khác nên chúng ta cũng phải cấu hình lại file 000-default.conf của apache sang port 8080 mà chúng ta mới sửa:\
+![image](https://github.com/user-attachments/assets/7244a6d0-c784-4120-b4aa-38103db90631)
+![image](https://github.com/user-attachments/assets/9542d880-f4b4-48c3-9fa8-2d57d61b013b)
+
+Khởi động lại Apache để áp dụng cấu hình mới bằng lệnh: `systemctl restart apache2`\
+Tạo file cấu hình cho reverse proxy:
+![image](https://github.com/user-attachments/assets/8ab8c80f-a8d6-46a9-8d92-e9bd611b00b5)
+
+Thêm vào các dòng sau:\
+![image](https://github.com/user-attachments/assets/fe305a6a-d314-4cf5-bfc1-f2e46ebbbb0e)
+
+* Giải thích ý nghĩa các dòng:
+	+ listen: cổng mà nginx tiến hành lắng nghe ở đây là 80 mặc định là http
+	+ server_name: khai báo tên miền, hoặc địa chỉ IP mà nginx sẽ chạy khi có yêu cầu đến  địa chỉ này
+	+ proxy_pass: chuyển tiếp tất cả yêu cầu HTTP đến một backend server khác, do ở đây là cấu hình trên cùng máy chủ nên sẽ để là đỉa chỉ localhost với port 8080 nơi mà webserver nginx của chúng ta đang hoạt động
+	+ proxy_set_header Host $host: thêm header Host vào yêu cầu gửi đi giúp backend server nhận được thông tin tên miền chính xác mà client đã yêu cầu
+	+ proxy_set_header X-Real-IP $remote_addr: gửi địa chỉ IP của client yêu cầu đến máy chủ backend
+  + proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for: gửi tất cả các proxy server mà gói tin client đã đi qua trước đó để đến backend server
+  + proxy_set_header X-Forwarded-Proto $scheme: gửi cho Backend Server biết giao thức mà client đã sử dụng
+Kích hoạt và liên kết đến thư mục sites-enabled:
+![image](https://github.com/user-attachments/assets/026a6b33-0fc6-4c7b-892f-13c098419f90)
+
+Kiểm tra xem cấu hình đã hoạt động hay chưa bằng lệnh `nginx -t`\
+Ta thấy cấu hình mới đã hoạt động thành công:
+![image](https://github.com/user-attachments/assets/c1e35264-2f1e-4006-8ba0-8e2818b30cb2)
+
+Khởi động lại dịch vụ nginx với lệnh `systemctl restart nginx` và truy cập vào địa chỉ IP để kiểm tra kết quả:
+![image](https://github.com/user-attachments/assets/69dbb622-b43d-4d48-95b7-e04804fd3e39)
+
+Ta thấy nội dung trang web vẫn được hiển thị từ Apache nhưng Webserver của nó đang là nginx/1.18.0. Như vây ta đã cấu hình thành công Reverse Proxy bằng NGINX cho máy chủ Apache.
+Thử sửa proxy_pass trong file reverse-proxy.conf thành google.com:\
+![image](https://github.com/user-attachments/assets/d590bc63-fe94-490a-baf7-0a842a1149c7)
+
+Khi truy cập vào IP của VPS, ta thấy nó có status 301 nghĩa là đã chuyển sang google.com vĩnh viễn:
+![image](https://github.com/user-attachments/assets/27cfb841-d4b8-4eba-8f33-f013e439f6c6)
+![image](https://github.com/user-attachments/assets/7fd1f207-1c3c-4954-8572-cdde59be8dd2)
+![image](https://github.com/user-attachments/assets/63aa4f22-f1cd-4943-8bc3-bcd179f9033e)
 
 
 
