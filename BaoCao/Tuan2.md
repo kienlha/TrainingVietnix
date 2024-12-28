@@ -1,10 +1,29 @@
 # 1. Domain
-## Trang quản trị Domain của Hostinger:
-![image](https://github.com/user-attachments/assets/030c2cea-4a14-4c11-99ca-a4d0e04bed5d)
-![image](https://github.com/user-attachments/assets/317e6575-4540-48f1-aed9-e759cf2a0136)
+## Quản trị Domain trên cPanel:
+Để vào giao diện quản lý domain, ta vào Tools, trong danh sách công cụ Domains ta chọn Domains:
+![image](https://github.com/user-attachments/assets/cc07b692-4916-4133-a0ae-d6134004cd3c)
 
-- Để trỏ domain vào hosting ta chỉnh sửa địa chỉ IP trong A record:
-![image](https://github.com/user-attachments/assets/3c53b49f-fac5-4b24-92d3-6100481ec8a6)
+Giao diện quản lý Domain trong cPanel:
+![image](https://github.com/user-attachments/assets/360896c8-5379-46e7-a5d6-1ca553ba29df)
+- Tại đây ta có thể xem danh sách domain, thực hiện các cấu hình cho domain trong danh sách, tạo domain mới
+
+Nhấn nút Create A New Domain để tạo 1 domain mới:
+![image](https://github.com/user-attachments/assets/418c9169-1f03-4aa9-a671-ace3f527460f)
+
+Nhập vào tên Domain, chọn Share document root nếu muốn tạo Alias domain, bỏ chọn nếu muốn tạo addon domain:
+![image](https://github.com/user-attachments/assets/a028be50-0102-4306-aeee-3108a9a9a0a0)
+
+Nhấn nút Submit để tạo. Domain mới sẽ được thêm vào danh sách:
+![image](https://github.com/user-attachments/assets/013ed350-bd94-4c00-bbc7-7388d262d8c4)
+
+Để xem và quản lý các record của các domain ta chọn Zone Editor trong Tools của Domain:\
+![image](https://github.com/user-attachments/assets/7f399396-533e-4a2c-842b-f658dbfd532e)
+
+Tại giao diện Zone Editor, trong mục Actions có các tùy chọn để thêm các Record, DNSSEC key và quản lý các Record:
+![image](https://github.com/user-attachments/assets/e1ec6f35-fe3f-4b5a-becf-b81fee57b9ad)
+
+Chọn Manage để vào giao diện xem, xóa, sửa các bản ghi của từng domain:
+![image](https://github.com/user-attachments/assets/1c5804b8-10ac-47ff-ab6b-a65c86e6ff22)
 
 Xem thông tin Domain bằng cách sử dụng công cụ LOOKUP của ICANN:
 ![image](https://github.com/user-attachments/assets/a5238446-930f-4678-837b-6e5f065c1c28)
@@ -52,7 +71,7 @@ Nhập các thông tin cần thiết và nhấn Install Now:
 Sau khi cài xong, khi truy cập vào tên miền kienlha.xyz ta sẽ vào được website đã tạo:
 ![image](https://github.com/user-attachments/assets/3b091c99-51b4-45e0-8baa-b3adfb94239e)
 
-# 4. Chuyển dữ liệu website từ Cpanel qua Cyberpanel
+# 4. Chuyển dữ liệu website từ cPanel qua Cyberpanel
 Tạo file backup trang web wordpress:
 - Vào File Manager, nén tất cả các file trong thư mục lưu web (public_html), sau đó tải về máy
 ![image](https://github.com/user-attachments/assets/036bff02-c87e-409e-b527-6b90412ebd09)
@@ -72,7 +91,7 @@ Trong File Manager, chọn file wp-config.php và chọn Edit:
 Sửa lại các thông tin cho đúng với CSDL bên Cyberpanel và lưu lại:
 ![image](https://github.com/user-attachments/assets/9148d425-0dbe-464f-8125-e63127b19764)
 
-Vào trang quản lý tên miền trỏ vào IP của Cyberpanel, sau đó truy cập tên miền kienlha.xyz sẽ vào được trang web chuyển từ Cpanel:
+Vào trang quản lý tên miền trỏ vào IP của Cyberpanel, sau đó truy cập tên miền kienlha.xyz sẽ vào được trang web chuyển từ cPanel:
 ![image](https://github.com/user-attachments/assets/549af295-96cd-49e2-ad98-79401eaaab4d)
 
 # 5. Cài đặt website Wordpress trên VPS
@@ -131,9 +150,9 @@ Nhấn Install Now trên plugin cấn cài đặt:
 Sau khi cài xong nhấn Activate để kích hoạt Plugin:\
 ![image](https://github.com/user-attachments/assets/b535dddc-8abb-43d8-9fa5-5a1c2416117f)
 
-# 6. Setup Mail Account, FTP Account trên Cpanel
+# 6. Setup Mail Account, FTP Account trên cPanel
 ## Mail Account:
-Các công cụ về Email trên Cpanel:
+Các công cụ về Email trên cPanel:
 ![image](https://github.com/user-attachments/assets/52ac6ccc-785c-4cc8-97e4-017aa9dc3948)
 
 Giao diện quản lý Email Accounts:
@@ -197,14 +216,14 @@ Một số lợi ích của Reverse Proxy:
 - Bảo mật tốt
 - Giảm áp lực xử lý SSL trên máy chủ backend và cung cấp một lớp bảo mật tốt hơn
 - Chuyển hướng linh hoạt
-## Cài đặt Reverse Proxy cho Cpanel
-Trang web hiện tại của Cpanel đang sử dụng web server là Apache:\
+## Cài đặt Reverse Proxy cho cPanel
+Trang web hiện tại của cPanel đang sử dụng web server là Apache:\
 ![image](https://github.com/user-attachments/assets/7f82891b-9f80-4c04-83b9-83cad3d2073a)
 
 Cài đặt NGINX với lệnh `apt install --purge ea-nginx`
 ![image](https://github.com/user-attachments/assets/38242ee5-8244-4047-b7eb-cb8b7271cbaa)
 
-Như vậy ta đã cài reverse proxy NGINX thành công, để kiểm tra, khi vào Cpanel ta thấy trong cột General Information có thêm mục NGINX caching:\
+Như vậy ta đã cài reverse proxy NGINX thành công, để kiểm tra, khi vào cPanel ta thấy trong cột General Information có thêm mục NGINX caching:\
 ![image](https://github.com/user-attachments/assets/90e17cae-960a-446f-8231-db6b1ea928d1)
 
 Trên WHM, ta thấy xuất hiện các tùy chọn của NGINX Manager:
