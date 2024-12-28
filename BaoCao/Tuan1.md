@@ -15,7 +15,7 @@ Dùng lệnh `whmlogin` và truy cập vào đường dẫn được tạo ra đ
 Click vào checkbox và nhấn Continue:
 ![image](https://github.com/user-attachments/assets/f7d5dc10-ee55-4834-822f-cde1c0cc55c5)
 
-Ta có thể đăng nhập vào WHM bằng cách truy cập vào đường dẫn http://domain:2087
+Ta có thể đăng nhập vào WHM bằng cách truy cập vào đường dẫn http://domain:2087 và nhập thông tin đăng nhập là user/password của VPS:
 ![image](https://github.com/user-attachments/assets/304363b0-5fc1-4b31-b9ba-dc73571cd8b8)
 
 Giao diện chính của WHM:
