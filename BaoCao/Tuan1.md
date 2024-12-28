@@ -38,7 +38,7 @@ máy chủ lưu trữ website của mình.
 Sau khi bạn đã trỏ tên miền về máy chủ lưu trữ website của mình, bạn sẽ có thể truy
 cập website của mình bằng tên miền. Để làm điều này, bạn chỉ cần nhập tên miền vào
 trình duyệt web của mình.\
-Một số tên miền phổ biến:
+Một số tên miền phổ biến:\
 ![image](https://github.com/user-attachments/assets/15248912-cf39-4931-8303-e347ead9aeae)
 
 ## 1.3. VPS
