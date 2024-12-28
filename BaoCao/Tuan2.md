@@ -1,3 +1,26 @@
+- [1. Domain](#1-domain)
+	- [Quản trị Domain trên cPanel:](#quản-trị-domain-trên-cpanel)
+	- [Các trạng thái cần có của Domain:](#các-trạng-thái-cần-có-của-domain)
+	- [Các trạng thái gây ảnh hưởng tới việc truy cập website:](#các-trạng-thái-gây-ảnh-hưởng-tới-việc-truy-cập-website)
+- [2. Đăng ký, cài đặt cấu hình hosting/vps](#2-đăng-ký-cài-đặt-cấu-hình-hostingvps)
+- [3. Cài đặt Cyberpanel trên VPS](#3-cài-đặt-cyberpanel-trên-vps)
+- [4. Chuyển dữ liệu website từ cPanel qua Cyberpanel](#4-chuyển-dữ-liệu-website-từ-cpanel-qua-cyberpanel)
+- [5. Cài đặt website Wordpress trên VPS](#5-cài-đặt-website-wordpress-trên-vps)
+	- [Cài đặt PHP, Apache và các thư viện liên quan](#cài-đặt-php-apache-và-các-thư-viện-liên-quan)
+	- [Cài đặt Wordpress](#cài-đặt-wordpress)
+	- [Cấu hình Apache cho WordPress](#cấu-hình-apache-cho-wordpress)
+	- [Cấu hình cơ sở dữ liệu](#cấu-hình-cơ-sở-dữ-liệu)
+	- [Cấu hình WordPress kết nối với CSDL:](#cấu-hình-wordpress-kết-nối-với-csdl)
+	- [Vào trang WordPress:](#vào-trang-wordpress)
+	- [Cài đặt plugin cho WordPress:](#cài-đặt-plugin-cho-wordpress)
+- [6. Setup Mail Account, FTP Account trên cPanel](#6-setup-mail-account-ftp-account-trên-cpanel)
+	- [Mail Account:](#mail-account)
+	- [FTP Account:](#ftp-account)
+- [7.Reverse Proxy](#7reverse-proxy)
+	- [Giới thiệu](#giới-thiệu)
+	- [Cài đặt Reverse Proxy cho cPanel](#cài-đặt-reverse-proxy-cho-cpanel)
+	- [Cài đặt Reverse Proxy NGINX cho Webserver Apache](#cài-đặt-reverse-proxy-nginx-cho-webserver-apache)
+
 # 1. Domain
 ## Quản trị Domain trên cPanel:
 Để vào giao diện quản lý domain, ta vào Tools, trong danh sách công cụ Domains ta chọn Domains:
