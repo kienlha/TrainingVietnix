@@ -99,7 +99,7 @@ Thông tin cần lưu ý của các gói dịch vụ:
 # **2. Tìm hiểu về WHM và cPanel**
 ...
 # **3. Cài đặt WHM và Cpanel trên VPS**
-ssh vào VPS:
+ssh vào VPS:\
 ![image](https://github.com/user-attachments/assets/36ed480d-8079-46a9-9954-78eadc186880)
 
 Để cài WHM và Cpanel, ta chạy lệnh `cd /home && curl -o latest -L https://securedownloads.cpanel.net/latest && sh latest`
