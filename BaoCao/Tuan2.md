@@ -9,6 +9,8 @@
 Xem thông tin Domain bằng cách sử dụng công cụ LOOKUP của ICANN:
 ![image](https://github.com/user-attachments/assets/a5238446-930f-4678-837b-6e5f065c1c28)
 
+Ta thấy tên miền kienlha.xyz có 2 trạng thái là: serverTransferProhibited(không được chuyển đổi tên miền từ nhà đăng ký tên miền này sang một nhà đăng ký tên miền khác) và clientTransferProhibited(khóa chuyển nhượng tên miền).
+
 ## Các trạng thái cần có của Domain: 
 - Server Status Code: addPeriod, autoRenewPeriod, inactive, ok, pendingCreate, pendingDelete, pendingRenew, pendingRestore, pendingTransfer, pendingUpdate, redemptionPeriod, renewPeriod, serverDeleteProhibited, serverHold, serverRenewProhibited, serverTransferProhibited, serverUpdateProhibited,  transferPeriod.
 - Client Status Code: clientDeleteProhibited, clientHold, clientRenewProhibited, clientTransferProhibited, clientUpdateProhibited.
