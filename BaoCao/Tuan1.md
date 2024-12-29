@@ -97,7 +97,54 @@ Thông tin cần lưu ý của các gói dịch vụ:
 
 
 # **2. Tìm hiểu về WHM và cPanel**
-...
+## 2.1. WHM
+WHM (Web Host Manager) là một bảng điều khiển cấp cao, cho phép quản trị viên quản lý máy chủ và tạo các tài khoản cPanel. WHM chủ yếu dành cho quản trị viên máy chủ (server admin) hoặc reseller để kiểm soát tổng thể dịch vụ hosting.
+
+Các chức năng chính của WHM:
+- Quản lý tài khoản cPanel:
+  + Tạo, sửa đổi, xóa tài khoản cPanel.
+  + Đặt giới hạn băng thông, dung lượng lưu trữ cho từng tài khoản.
+- Quản lý tên miền: Tạo, xóa tên miền bổ sung (add-on) hoặc tên miền phụ (subdomain).
+- Quản lý gói dịch vụ (Packages): Tạo các gói hosting khác nhau (ví dụ: Basic, Pro, Premium) với thông số tùy chỉnh.
+- Bảo mật máy chủ:
+  + Quản lý tường lửa.
+  + Cấu hình SSL.
+  + Giám sát các địa chỉ IP bị cấm.
+- Giám sát và quản lý máy chủ:
+  + Theo dõi hiệu suất CPU, RAM, và ổ cứng.
+  + Khởi động lại dịch vụ (Apache, MySQL, FTP, v.v.).
+- Backup dữ liệu: Lên lịch và quản lý backup máy chủ và các tài khoản.
+## 2.2. cPanel
+cPanel là bảng điều khiển dành cho người dùng cuối, được tạo từ WHM, để quản lý tài khoản hosting cá nhân. Người dùng cPanel thường là chủ sở hữu website hoặc quản trị viên cấp nhỏ hơn.
+
+Các chức năng chính của cPanel:
+- Quản lý file:
+  + Upload/download file qua File Manager.
+  + Tạo và quản lý FTP account.
+- Quản lý tên miền:
+  + Thêm/tùy chỉnh tên miền chính, tên miền phụ, tên miền bổ sung.
+  + Quản lý DNS.
+- Cài đặt email:
+  + Tạo tài khoản email theo tên miền (ví dụ: info@domain.com).
+  + Thiết lập trả lời tự động và chuyển tiếp email.
+- Cài đặt cơ sở dữ liệu:
+  + Quản lý MySQL, MariaDB, và phpMyAdmin.
+  + Tạo hoặc sửa đổi database.
+- Quản lý bảo mật:
+  + Cài đặt SSL/TLS cho website.
+  + Sử dụng công cụ bảo mật như IP Blocker, ModSecurity.
+- Cài đặt phần mềm và ứng dụng:
+  + Hỗ trợ cài đặt WordPress, Joomla, hoặc các ứng dụng qua Softaculous.
+- Quản lý tài nguyên:
+  + Theo dõi mức sử dụng tài nguyên (CPU, RAM, băng thông, dung lượng).
+## 2.3. So sánh WHM và cPanel
+| **Tiêu chí**       | **WHM**                                                                                   | **cPanel**                                                                                                   |
+|---------------------|-------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
+| **Bảng điều khiển** | WHM là một Reseller control panel, được Reseller sử dụng để quản lý các tài khoản hosting trong gói của họ. | cPanel là bảng điều khiển cho người dùng cuối, được sử dụng để quản lý tài khoản hosting của cá nhân.      |
+| **Quyền truy cập**  | WHM cung cấp cho Reseller quyền truy cập gốc (root).                                       | cPanel chỉ cung cấp quyền truy cập vào tài khoản web hosting trên máy chủ cho người dùng.                  |
+| **Port number**     | WHM hoạt động thông qua 2087.                                                             | cPanel hoạt động thông qua 2083.                                                                           |
+| **Mật khẩu**        | Mật khẩu cho WHM trùng với tài khoản cPanel tương ứng. Nếu thay đổi mật khẩu WHM, mật khẩu của cPanel cũng thay đổi. | Người dùng cuối có thể tự đặt mật khẩu cho cPanel nếu họ muốn.                                            |
+| **Domain**          | Chỉ có thể thêm domain chính, không thể thêm subdomain.                                   | Có thể thêm/xóa các addon domain và subdomain.                                                             |
 # **3. Cài đặt WHM và Cpanel trên VPS**
 ssh vào VPS:\
 ![image](https://github.com/user-attachments/assets/36ed480d-8079-46a9-9954-78eadc186880)
