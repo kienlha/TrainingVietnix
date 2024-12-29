@@ -319,3 +319,8 @@ Bắt đầu cài đặt với lệnh `bash vst-install.sh`:
 Nhập các thông tin cần thiết:
 ![image](https://github.com/user-attachments/assets/bb444d01-782c-44eb-b319-d1a967bb057a)
 
+Sau khi cài đặt thành công, ta sẽ nhận được đường dẫn truy cập vào web panel của VestaCP và username/password đăng nhập:
+![image](https://github.com/user-attachments/assets/faf16f33-65cb-4dd0-af67-a3eed41f1bbe)
+
+Truy cập vào trang đăng nhập VestaCP và nhập username/password:
+![image](https://github.com/user-attachments/assets/8355cb27-82fe-4460-bea3-c161cae9d171)
