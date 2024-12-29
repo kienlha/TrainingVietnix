@@ -59,7 +59,7 @@ công nghệ ảo hóa tiên tiến trên nền tảng Dell Hardware mang lại 
 ## 1.5. Email doanh nghiệp
 Email doanh nghiệp hay còn gọi là email theo tên miền riêng, là dịch vụ thư điện tử thiết yếu giúp đơn giản hóa quá trình trao đổi thông tin và thực hiện giao dịch trực tuyến cho doanh nghiệp. Dịch vụ này cung cấp khả năng quản lý nội dung email một cách hiệu quả, với dung lượng lưu trữ cao và tính năng chống thư rác. Ngoài ra, khác với email miễn phí, email doanh nghiệp có thể sử dụng tên miền riêng của công ty (ví dụ: tenban@tencongty.vn), việc này tạo sự chuyên nghiệp và tăng cường nhận diện thương hiệu cho doanh nghiệp.
 ## 1.6. SSL
-SSL được viết tắt từ Secure Sockets Layer, đây là một công nghệ bảo mật tiêu chuẩn, mã hóa thông tin liên lạc giữa máy chủ web và trình duyệt. Có khả năng đảm bảo toàn bộ dữ liệu trao đổi giữa máy chủ web và trình duyệt được bảo mật và an toàn. Bảo vệ thông tin nhạy cảm như mật khẩu, thông tin cá nhân và thanh toán khỏi bị đánh cắp bởi tin tặc.\
+SSL được viết tắt từ Secure Sockets Layer, đây là một công nghệ bảo mật tiêu chuẩn, mã hóa thông tin liên lạc giữa máy chủ web và trình duyệt. Có khả năng đảm bảo toàn bộ dữ liệu trao đổi giữa máy chủ web và trình duyệt được bảo mật và an toàn. Bảo vệ thông tin nhạy cảm như mật khẩu, thông tin cá nhân và thanh toán khỏi bị đánh cắp bởi tin tặc.
 
 Cách thức hoạt động:
 1. Xin phép kết nối an toàn: Khi bạn muốn truyền dữ liệu an toàn qua mạng, máy
@@ -177,3 +177,145 @@ Giao diện chính của Cpanel:
 ![image](https://github.com/user-attachments/assets/ca815e7c-5ff2-4323-ae55-637b86c595f5)
 
 Như vậy ta đã cài đặt thành công WHM và Cpanel trên VPS.
+
+## **4. Cài đặt các control panel trên VPS**
+## 4.1. Cài đặt aaPanel
+aaPanel là một bảng điều khiển hosting miễn phí và mã nguồn mở, được thiết kế để quản lý máy chủ Linux và Windows thông qua giao diện đồ họa đơn giản và trực quan.\
+Với aaPanel, ta có thể dễ dàng cài đặt, quản lý các dịch vụ web hosting như Apache, Nginx, MySQL, PHP, và FTP mà không cần phải sử dụng dòng lệnh. Công cụ này còn cung cấp các tính năng như giám sát hiệu suất, quản lý tệp, lập lịch sao lưu, và tối ưu hóa bảo mật, giúp người dùng quản trị máy chủ hiệu quả hơn.
+
+Lệnh cài đặt aaPanel bản miễn phí trên Ubuntu 22.04:\
+`URL=https://www.aapanel.com/script/install_7.0_en.sh && if [ -f /usr/bin/curl ];then curl -ksSO "$URL" ;else wget --no-check-certificate -O install_7.0_en.sh "$URL";fi;bash install_7.0_en.sh aapanel`
+![image](https://github.com/user-attachments/assets/06040574-8c65-4f62-b5fa-08ab5805f423)
+
+Sau khi cài xong sẽ hiển thị địa chỉ truy cập giao diện web của aaPanel và username/password đăng nhập:
+![image](https://github.com/user-attachments/assets/f9a04770-6d4e-4c5e-a23c-8aa811f07c74)
+
+Truy cập vào aaPanel theo đường dẫn được hiển thị và đăng nhập bằng thông tin được cung cấp:
+![image](https://github.com/user-attachments/assets/71d17965-b05c-457f-99f4-51d56d408fb0)
+
+Chọn loại webserver và cài đặt aaPanel. Ở đây ta chọn LNMP và nhấn One click để cài đặt:
+![image](https://github.com/user-attachments/assets/9c9c1e52-680a-40ea-943b-2f124a7b92aa)
+
+Ở giao diện trang chủ của aaPanel, ta có thể xem trạng thái hệ thống (load status, cpu/ram/disk usage), tổng quan (số lượng trang web, ftp account, database, nguy cơ bảo mật), các phần mềm được cài, lượng traffic ra/vào:
+![image](https://github.com/user-attachments/assets/b3dfb591-7b6e-4e42-82bf-312d2353b2d3)
+
+Giao diện quản trị website trên aaPanel:
+![image](https://github.com/user-attachments/assets/d175f58b-2bf0-4740-b8b3-16f4c93a71a8)
+
+Để tạo 1 website, nhấn Add Site, nhập các thông tin cần thiết rồi nhấn Confirm:
+![image](https://github.com/user-attachments/assets/f68aeb3f-ac82-4a0d-95da-96e0b20e0cf2)
+![image](https://github.com/user-attachments/assets/03f5a1b4-c230-4051-8cab-2660a6db1876)
+
+Trang mới tạo đã xuất hiện trong danh sách:
+![image](https://github.com/user-attachments/assets/74b1cdee-c115-456c-be04-c7e38f6bcbfb)
+
+Sử dụng công cụ quản lý Database, ta có thể tạo, thiết lập, sao lưu, khôi phục csdl:
+![image](https://github.com/user-attachments/assets/77df2844-18bb-44e1-8278-9e9d62a0ac7d) 
+
+Công cụ quản lý Files cho phép tải lên, tải xuống, đóng gói, nén/giải nén, chỉnh sửa và xem file:
+![image](https://github.com/user-attachments/assets/8e4ec831-2870-4abd-97be-5a973ed054a2)
+
+- Upload:
+![image](https://github.com/user-attachments/assets/b877d61c-4657-4a4f-9f69-2cea7f361076)
+
+- Download:
+![image](https://github.com/user-attachments/assets/fe2f5b71-1101-4d73-a1eb-ccdf4568709e)
+
+- Thay đổi quyền truy cập:
+![image](https://github.com/user-attachments/assets/f6d8ae37-d572-4fe8-8d53-7563e39dddb6)
+
+- Nén file:
+![image](https://github.com/user-attachments/assets/e505bf51-749d-4cd3-84c0-c8e12308fe2c)
+
+- Giải nén:
+![image](https://github.com/user-attachments/assets/9fa4227e-d90b-4199-93ab-3183f55f483f)
+
+## 4.2. Cài đặt CyberPanel
+CyberPanel là một Control Panel miễn phí, được thiết kế để quản lý và tối ưu hóa máy chủ web, đặc biệt khi sử dụng OpenLiteSpeed hoặc LiteSpeed Enterprise. Nó được phát triển bởi LiteSpeed Technologies nhằm cung cấp một giải pháp đơn giản, hiệu quả và dễ sử dụng cho việc quản trị hosting trên máy chủ.
+
+Tải xuống Cyberpanel với lệnh `wget -O installer.sh https://cyberpanel.net/install.sh` \
+![image](https://github.com/user-attachments/assets/129b12b5-d4a0-4a2d-9df4-3c68dd5107be)
+
+Cấp quyền chạy với lệnh `chmod +x installer.sh` \
+![image](https://github.com/user-attachments/assets/2cd1390e-aa47-4a70-9c94-2cafa7a62163)
+
+Chạy với lệnh `sh installer.sh`. Để bắt đầu cài đật Cyberpanel ta nhấn 1\
+![image](https://github.com/user-attachments/assets/ec76edc1-1ee0-4f88-a948-748cd718a31e)
+
+Nhấn 1 để sử dụng OpenLiteSpeed miễn phí:
+![image](https://github.com/user-attachments/assets/f76bc1a4-195b-41f6-8d16-43abca24a8f6)
+
+Nhấn Y để cài đầy đủ service:
+![image](https://github.com/user-attachments/assets/996ccc7d-19a5-46b6-8195-934cf8a22e8b)
+
+Nhấn N để không cài Remote MySQL:
+![image](https://github.com/user-attachments/assets/38d0fe7b-668d-4dc1-ad62-8998cdfe940c)
+
+Thực hiện các tùy chọn khác:
+![image](https://github.com/user-attachments/assets/1f622e15-1161-4c56-bba3-f22f0dc357ac)
+
+Sau khi cài đặt thành công, ta sẽ nhận được đường dẫn truy cập giao diện web Cyberpanel có dạng https://IP-của-VPS:8090 và username/password đăng nhập:
+![image](https://github.com/user-attachments/assets/2c38dc6b-6fc3-4d33-880d-58b5f48da235)
+![image](https://github.com/user-attachments/assets/241321ac-7fc8-444b-949f-ccaadf886f09)
+
+
+Vào giao diện đăng nhập Cyberpanel và nhập username/password được cấp:
+![image](https://github.com/user-attachments/assets/fe946e32-d829-4950-9350-d744350a86c7)
+
+Giao diện trang chủ Cyberpanel:
+![image](https://github.com/user-attachments/assets/9f534354-9e5e-4aaf-ab2b-6251c2c81a85)
+
+Chọn USERS để sử dụng các chức năng liên quan đến user như xem hồ sơ của user hiện tại, xem danh sách user, tạo user mới, chỉnh sửa thông tin user, xóa user, thêm/xóa/sửa ACL:
+![image](https://github.com/user-attachments/assets/851d94b1-aef7-4119-b7f2-8fedd45c8ee5)
+
+- Tạo user mới:
+![image](https://github.com/user-attachments/assets/3a8de3d8-d2aa-4b23-b550-47434a473f29)
+
+- Tạo ACL:
+![image](https://github.com/user-attachments/assets/19c7fecb-3e8a-42d3-8163-9685cdc710fe)
+
+Chọn WEBSITES để sử dụng các chức năng như thêm/xóa/sửa/xem danh sách/tạm ngừng website:
+![image](https://github.com/user-attachments/assets/32f2350a-34a3-4042-a405-0324e5ffed91)
+- Tạo website mới:
+![image](https://github.com/user-attachments/assets/8cf0f67d-0d78-4c1e-8923-e5ee8a9a827a)
+![image](https://github.com/user-attachments/assets/9b93a288-c982-47fa-9d05-a2c1bc12edf5)
+
+Truy cập vào website vừa tạo với tên miền là kienlha.xyz:
+![image](https://github.com/user-attachments/assets/21a32245-8e52-4e3f-b0a6-97eadff7addc)
+
+Để chỉnh sửa nội dung website ta vào List Websites, chọn File Manager:
+![image](https://github.com/user-attachments/assets/0d1944c6-092d-418a-a6c2-c783e0f0f372)
+![image](https://github.com/user-attachments/assets/3daf04ce-28f2-4879-99fc-dee526dcd313)
+
+Vào Databases, chọn Create Databases để tạo CSDL mới:
+![image](https://github.com/user-attachments/assets/60d3c737-e2fd-4e7e-918a-b73e985f91c6)
+
+Để backup website, chọn Backup->Create Backup, sau đó chọn website và thư mục xong rồi nhấn Create Backup để bắt đầu:
+![image](https://github.com/user-attachments/assets/c3f8092d-5f23-49bb-afc3-cf95a2e1fc2e)
+
+Vào Email->Create Email để tạo tài khoản email mới:
+![image](https://github.com/user-attachments/assets/8f8d5afc-d25a-471e-9326-77a4e5c63443)
+
+Để truy cập web mail, nhập 14.225.206.52:8090/snappymail vào thanh địa chỉ:
+![image](https://github.com/user-attachments/assets/c0223a9d-8a6a-4dae-b15e-5d90e36b1bba)
+
+Đăng nhập vào webmail thành công:
+![image](https://github.com/user-attachments/assets/69211304-4b21-4455-89ce-05a3adbd3031)
+
+## 4.3. Cài đặt VestaCP
+VestaCP là viết tắt của cụm từ Vesta Control Panel (bảng điều khiển
+Vesta). Đây là một mã nguồn mở miễn phí, dễ cài đặt và cấu hình bảng điều khiển dựa trên nền tảng web cho các hệ thống như Linux. Với bất kỳ ai dùng VestaCP, ngay cả quản trị viên hệ thống mới cũng có thể dễ dàng quản lý các trang web trong VPS.\
+VestaCP mặc định hỗ trợ mô hình Nginx + Apache. Đây là mô hình
+webserver được sử dụng nhiều nhất hiện nay khi Nginx có thể xử ý các nội dung tĩnh (ảnh, font,...) còn Apache sẽ xử lý các Request động. Từ đó có để đáp ứng được nhiều truy cập cùng lúc nhưng tốn ít tài nguyên của máy chủ nhất.
+
+Tải xuống tập lệnh cài đặt với lệnh `curl -O http://vestacp.com/pub/vst-install.sh` \
+![image](https://github.com/user-attachments/assets/0b3a2314-2974-46a1-a956-4be05bfd8690)
+
+Thêm quyền thực thi với lệnh `chmod +x vst-install.sh`
+
+Bắt đầu cài đặt với lệnh `bash vst-install.sh`:
+![image](https://github.com/user-attachments/assets/3d22ace9-0b72-42ae-b2b0-63f1b51a1ce8)
+
+Nhập các thông tin cần thiết:
+![image](https://github.com/user-attachments/assets/bb444d01-782c-44eb-b319-d1a967bb057a)
+
