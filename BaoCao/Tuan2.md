@@ -60,11 +60,13 @@ Ta thấy tên miền kienlha.xyz có 2 trạng thái là: serverTransferProhibi
 ## Các trạng thái gây ảnh hưởng tới việc truy cập website: 
 inactive, pendingDelete, redemptionPeriod, serverHold, clientHold.
 # 2. Đăng ký, cài đặt cấu hình hosting/vps
-Hosting:
+**Hosting:**
 ![image](https://github.com/user-attachments/assets/26f5d722-cdda-4bac-a490-d948481d8dbd)
+- Ở đây có các công cụ để domain chính, cài lại hosting, tải lại hosting, chặn IP.
 
-VPS:
+**VPS:**
 ![image](https://github.com/user-attachments/assets/d95d88d3-5517-4cb9-b18c-5b08e419d793)
+- Ở đây có các công cụ để nâng cấp gói VPS, Backup, xem biểu đồ hoạt động, cài lại hệ điều hành, thông báo tài nguyên, thực hiện các tác vụ như start, stop, reboot
 
 # 3. Cài đặt Cyberpanel trên VPS
 Lệnh cài đặt Cyberpanel:

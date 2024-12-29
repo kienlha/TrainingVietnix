@@ -342,3 +342,6 @@ Sau khi cài đặt thành công, ta sẽ nhận được đường dẫn truy c
 
 Truy cập vào trang đăng nhập VestaCP và nhập username/password:
 ![image](https://github.com/user-attachments/assets/8355cb27-82fe-4460-bea3-c161cae9d171)
+
+Tuy nhiên vì VPS bị quá tải CPU nên ngưng ở màn hình đăng nhập:
+![image](https://github.com/user-attachments/assets/1f6af63c-fcc9-40c8-81b1-458b746d2872)
