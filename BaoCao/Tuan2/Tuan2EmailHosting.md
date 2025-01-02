@@ -28,5 +28,5 @@ Các thành phần chính trong Mail Relay là: .
 - Điều này giúp ngăn chặn spam và email giả mạo, đảm bảo email đến từ tên miền được xác định và không bị sửa đổi trong quá trình truyền tải.
   
 **Cách DKIM hoạt động:**
-- Server Mail nhận trích xuất chữ ký trong Email Header:
-- Dùng thông tin về Domain Key (s=default) để lấy PK:
+- Server Mail nhận trích xuất chữ ký trong Email Header
+- Dùng thông tin về Domain Key (s=default) để lấy PK
