@@ -149,5 +149,47 @@ Rule sau khi xóa thành công sẽ biến mất khỏi danh sách
 Nhấn OK hoặc Apply để hoàn thành:\
 ![image](https://github.com/user-attachments/assets/9306ffb4-124c-4d6a-bc4d-90137a459e2a)
 
+# 4. Quản lý Windows Firewall bằng dòng lệnh
+Ta có thể tự động hóa việc quản lý Firewall bằng dòng lệnh bằng cách sử dụng Windows Powershell với quyền admin.\
+## 4.1. Bật/tắt Windows Firewall
+Bật cho tất cả Profile với lệnh `Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled True`:\
+![image](https://github.com/user-attachments/assets/74eb53a8-0538-49fc-a4fe-1bd443f5e0eb)
+![image](https://github.com/user-attachments/assets/4ebf7a24-4691-4cf6-a309-d5cedd5a9e8e)
+
+Tắt cho tất cả profile với lệnh `Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled False`:\
+![image](https://github.com/user-attachments/assets/14cea54f-cb4d-4d00-9651-30398d07dedc)
+![image](https://github.com/user-attachments/assets/ee246853-ba22-4b25-a01f-d4c5e0c4d15a)
+
+## 4.2. Tạo Rule mới
+Để tạo 1 rule có tên là "Allow Inbound Telnet" với lưu lượng mạng đi vào, đường dẫn program là *%SystemRoot%\System32\tlntsvr.exe*, remote address là *LocalSubnet*, action là cho phép ta dùng lệnh:\
+`New-NetFirewallRule -DisplayName "Allow Inbound Telnet" -Direction Inbound -Program %SystemRoot%\System32\tlntsvr.exe -RemoteAddress LocalSubnet -Action Allow`\
+Với các tham số:
+- DisplayName: Tên rule
+- Direction: lưu lượng mạng vào hoặc ra
+- Program: đường dẫn tới chương trình
+- Remote Address: địa chỉ máy được kết nối từ xa
+- Action: chặn hoặc cho phép
+![image](https://github.com/user-attachments/assets/4c3a1be8-f33e-4da9-9183-efc95e114b2d)
+![image](https://github.com/user-attachments/assets/8db1abd6-9da5-4e4b-9ad8-140e262828a5)
+
+## 4.3. Xóa Rule
+Xóa rule theo tên DisplayName:
+- Để xóa rule có tên là "Block port 22", ta dùng lệnh:\
+  `Remove-NetFirewallRule -DisplayName "Block port 22"`\
+  ![image](https://github.com/user-attachments/assets/0f0889b6-0b69-4b98-b5f6-dc4876222c6c)
+  ![image](https://github.com/user-attachments/assets/04c60f9d-3f9d-45b8-be80-d9718f7b5a58)
+  ![image](https://github.com/user-attachments/assets/c0dcd64f-b517-415a-8553-50ecdbe79064)
+
+Xóa rule theo Action:
+- Để cóa tất cả rule có action là Block, ta dùng lệnh:\
+  `Remove-NetFirewallRule -Action Block`\
+  ![image](https://github.com/user-attachments/assets/36a1db61-bd12-4db6-a9ee-812e16dbb2ec)
+  ![image](https://github.com/user-attachments/assets/87e611b4-1e51-4280-9198-b04637fea483)
+  ![image](https://github.com/user-attachments/assets/bb58227a-21a4-4f2b-b0f4-dc0f44574da6)
+
+
+
+
+
 
 
