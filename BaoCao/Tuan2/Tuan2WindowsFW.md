@@ -1,3 +1,16 @@
+- [1. Giới thiệu về Windows Firewall](#1-giới-thiệu-về-windows-firewall)
+- [2. Các chức năng cơ bản của Windows Firewall](#2-các-chức-năng-cơ-bản-của-windows-firewall)
+- [3. Các chức năng nâng cao của Windows Firewall](#3-các-chức-năng-nâng-cao-của-windows-firewall)
+  - [3.1. Tổng quan](#31-tổng-quan)
+  - [3.2. Tạo Rule mới](#32-tạo-rule-mới)
+    - [VD1: Chặn port 22](#vd1-chặn-port-22)
+    - [VD2: Tạo Rule cho phép ping từ ngoài vào](#vd2-tạo-rule-cho-phép-ping-từ-ngoài-vào)
+    - [VD3: Chặn kết nối HTTP](#vd3-chặn-kết-nối-http)
+  - [3.3. Vô hiệu hóa, xóa, sửa Rule](#33-vô-hiệu-hóa-xóa-sửa-rule)
+- [4. Quản lý Windows Firewall bằng dòng lệnh](#4-quản-lý-windows-firewall-bằng-dòng-lệnh)
+  - [4.1. Bật/tắt Windows Firewall](#41-bậttắt-windows-firewall)
+  - [4.2. Tạo Rule mới](#42-tạo-rule-mới)
+  - [4.3. Xóa Rule](#43-xóa-rule)
 # 1. Giới thiệu về Windows Firewall
 Windows Firewall là một tính năng bảo mật tích hợp trong hệ điều hành Windows của Microsoft, giúp bảo vệ máy tính khỏi các mối đe dọa từ mạng. Đây là một tường lửa lọc gói dữ liệu, kiểm soát luồng thông tin giữa thiết bị và internet hoặc mạng nội bộ.\
 ![image](https://github.com/user-attachments/assets/298fd55c-5b6d-49be-bbfe-670ed30fb208)

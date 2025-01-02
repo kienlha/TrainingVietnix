@@ -1,3 +1,12 @@
+- [1. Tổng quan về Email Hosting](#1-tổng-quan-về-email-hosting)
+  - [1.1. Định nghĩa](#11-định-nghĩa)
+  - [1.2. Tính năng của Email Hosting Vietnix](#12-tính-năng-của-email-hosting-vietnix)
+- [2. Email Relay](#2-email-relay)
+- [3. MX record](#3-mx-record)
+- [4. DKIM, SPF và PTR(RDNS) record](#4-dkim-spf-và-ptrrdns-record)
+  - [4.1. DKIM](#41-dkim)
+  - [4.2. SPF](#42-spf)
+  - [4.3. PTR(RDNS)](#43-ptrrdns)
 # 1. Tổng quan về Email Hosting
 ## 1.1. Định nghĩa
 Email hosting là một dịch vụ cung cấp khả năng tạo, gửi, nhận, lưu trữ email và quản lý email trên tên miền riêng, được tích hợp trực tiếp vào tài khoản hosting của bạn một cách an toàn và chuyên nghiệp mà không cần xây dựng hệ thống riêng. Thay vì sử dụng các dịch vụ email miễn phí như Gmail hay Yahoo với tên miền chung, Email Hosting cho phép doanh nghiệp hoặc cá nhân có địa chỉ email chuyên nghiệp.
