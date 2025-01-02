@@ -21,7 +21,7 @@ Các thành phần chính trong Mail Relay là: .
 - Mail Relay Server: Một máy chủ email có thể được cấu hình để chuyển tiếp email đến một máy chủ email khác
 - Smart Host: là một máy chủ email đóng vai trò là điểm trung gian cho việc chuyển tiếp email từ máy chủ nguồn đến máy chủ đích.
 
-# 3. DKIM và SPF
+# 3. DKIM, SPF và PTR(RDNS)
 ## 3.1. DKIM
 **Khái niệm:**
 - DKIM (DomainKeys Identified Mail) là một tiêu chuẩn xác thực email giúp xác định tính hợp lệ của email và nguồn gốc của nó bằng cách sử dụng chữ ký số được gắn vào email (private - public key). 
@@ -30,3 +30,32 @@ Các thành phần chính trong Mail Relay là: .
 **Cách DKIM hoạt động:**
 - Server Mail nhận trích xuất chữ ký trong Email Header
 - Dùng thông tin về Domain Key (s=default) để lấy PK
+
+## 3.2. SPF
+SPF là viết tắt của "Sender Policy Framework" được sử dụng để bảo vệ và xác minh tính xác thực của email. SPF được sử dụng để ngăn chặn email giả mạo và gian lận.
+
+Khi một máy chủ mail nhận một mail, nó sẽ kiểm tra xem tên miền này đã được cấu hình SPF hay chưa. SPF ghi rõ các IP được ủy quyền để gửi mail từ tên miền đó. Nếu mail được gửi từ một IP không có trong danh sách SPF thì mail này sẽ được đánh dấu nó là spam hoặc từ chối nhận.
+
+Giải thích SPF record:\
+`"v=spf1 +mx +a +ip4:103.200.23.160 ~all"`\
+`“v=spf1 +mx +a include: _spf.mta.vietnix.com ~all”`
+| Loại | Result Code | Giải thích                          |
+|------|-------------|-------------------------------------|
+| +    | Pass        | Cho phép                           |
+| -    | Fail        | Từ chối                            |
+| ~    | Soft Fail   | Đánh dấu là từ chối nhưng vẫn nhận |
+| ?    | Neutral     | Không từ chối cũng không đồng ý (treo) |
+
+| Loại    | Giải thích                                                                                   |
+|---------|----------------------------------------------------------------------------------------------|
+| +mx     | Accept nếu MX Server trùng với IP đang gửi mail                                              |
+| +a      | Nếu IP gửi tới trùng với IP của domain thì accept                                            |
+| +ip4    | Đây là IP của SMTP Outgoing SMTP Server                                                     |
+| include | Khi mail server gặp giá trị include nó sẽ tìm record TXT của giá trị include như vậy ta có 2 record SPF lồng nhau |
+| ~all    | Tất cả các nguyên tắc trên luôn được áp dụng                                                |
+
+## 3.3. PTR(RDNS)
+- Record PTR được sử dụng trong việc thực hiện xác minh đảm bảo rằng máy chủ gửi email là máy chủ hợp pháp của tên miền.
+- Máy chủ email khi gửi mail thì cần có một bản ghi PTR tương ứng trong hệ thống DNS để xác minh rằng địa chỉ IP của máy chủ đó có liên quan đến tên miền. 
+- Khi máy chủ email nhận một email từ một máy chủ khác, nó có thể kiểm tra bản ghi PTR của máy chủ gửi để đảm bảo tính hợp lệ của nguồn gốc. Nếu bản ghi PTR không khớp hoặc không tồn tại, email có thể bị xem xét như một email spam.
+- Sử dụng bản ghi PTR cùng với các tiêu chuẩn xác thực email khác như DKIM và SPF giúp làm giảm khả năng email giả mạo và cải thiện tính hợp lệ của email trong hệ thống email.
