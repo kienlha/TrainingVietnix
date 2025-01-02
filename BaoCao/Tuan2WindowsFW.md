@@ -109,18 +109,18 @@ Truy cập vào website http://stealmylogin.com ta thấy nó đã bị chặn:
 ![image](https://github.com/user-attachments/assets/8453d168-919a-42ef-b680-b38bfd88c7ab)
 
 ## 3.3. Vô hiệu hóa, xóa, sửa Rule
-Để vô hiệu hoá 1 rule, ta chọn Rule đó trong danh sách (ở đây ta chọn rule Allow Ping) rồi nhấn Disable Rule ở thanh bên phải:
+Để vô hiệu hoá 1 rule, ta chọn Rule đó trong danh sách (ở đây ta chọn rule Allow Ping) rồi nhấn **Disable Rule** ở thanh bên phải:
 ![image](https://github.com/user-attachments/assets/4cb1414f-5c37-4231-aa0a-6ca4e7e44e05)
 ![image](https://github.com/user-attachments/assets/3709abc5-cea2-419e-ae1f-4be65b666be3)
 
 Sau khi vô hiệu hóa thành công thì biểu tượng bên cạnh tên Rule sẽ chuyển sang màu xám:
 ![image](https://github.com/user-attachments/assets/a1d3da5a-c86e-4f75-ae5c-06d8cd3441bd)
 
-Để xóa 1 rule thì tương tự ta cũng chọn rule trong danh sách, còn ở thanh bên phải ta chọn Delete\
+Để xóa 1 rule thì tương tự ta cũng chọn rule trong danh sách, còn ở thanh bên phải ta chọn **Delete**\
 ![image](https://github.com/user-attachments/assets/4b4f6d37-3dad-4949-9c85-abc1c91a3ad9)\
 Rule sau khi xóa thành công sẽ biến mất khỏi danh sách
 
-Để sửa 1 rule, ta cũng chọn rule đó trong danh sách, ở thanh bên phải ta chọn Properties\
+Để sửa 1 rule, ta cũng chọn rule đó trong danh sách, ở thanh bên phải ta chọn **Properties**\
 ![image](https://github.com/user-attachments/assets/22912536-46d4-44b7-b835-187435adf7c1)
 - Ở tab **General** ta có thể đổi tên Rule, chọn kích hoạt Rule hay không, thay đổi tùy chọn cho phép/chặn kết nối:
   ![image](https://github.com/user-attachments/assets/400a12f1-0073-4ba9-a809-c0fecc0ca8d7)
